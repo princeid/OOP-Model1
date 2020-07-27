@@ -26,6 +26,6 @@ public class Student extends Person implements Course{
     }
 
     public void takeCourse() {
-
+//        if ()
     }
 }

@@ -36,4 +36,11 @@ public class Department {
     public void setStudent(List<Student> student) {
         this.student = student;
     }
+
+
+
+
+
+
+
 }
