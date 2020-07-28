@@ -1,46 +1,46 @@
 package School;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 class PersonTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getName() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void setName() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getAge() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void setAge() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getGender() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void setGender() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getPhone() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void setPhone() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getEmail() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void setEmail() {
     }
 }

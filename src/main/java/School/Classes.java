@@ -7,7 +7,7 @@ public enum Classes {
 
     private String value;
 
-    private Classes (String value) {
+    Classes (String value) {
         this.value = value;
     }
 

@@ -24,5 +24,4 @@ public class School {
     public List<Student> getStudent() {
         return student;
     }
-
 }

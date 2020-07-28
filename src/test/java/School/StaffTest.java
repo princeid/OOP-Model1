@@ -1,30 +1,30 @@
 package School;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 class StaffTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getSalary() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void setSalary() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getJobTitle() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void setJobTitle() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getId() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void setId() {
     }
 }

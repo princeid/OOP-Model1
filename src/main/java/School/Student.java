@@ -38,7 +38,23 @@ public class Student extends Person implements Course {
         return id;
     }
 
-    public void takeCourse() {
-        Classes level = Classes.CLASS1;
+    // The student is Implementing the Course Interface
+    public String viewCourses() {
+        if (classAssigned.equals("class1")) {
+            Classes level = Classes.CLASS1;
+            String classes = level.getClasses();
+            System.out.println( getName() + ", here's a list of your Class1 courses for the term: " + classes);
+        }
+        if (classAssigned.equals("class2")) {
+            Classes level = Classes.CLASS2;
+            String classes = level.getClasses();
+            System.out.println( getName() + ", here's a list of your Class2 courses for the term: " + classes);
+        }
+        if (classAssigned.equals("class3")) {
+            Classes level = Classes.CLASS3;
+            String classes = level.getClasses();
+            System.out.println( getName() + ", here's a list of your Class3 courses for the term: " + classes);
+        }
+        return "Invalid";
     }
 }

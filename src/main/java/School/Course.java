@@ -1,5 +1,5 @@
 package School;
 
 public interface Course {
-    void takeCourse();
+    String viewCourses();
 }

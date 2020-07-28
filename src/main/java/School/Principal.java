@@ -25,9 +25,9 @@ public class Principal extends Staff {
             return "Admission Denied. Class capacity is full";
         }
 
-        Student student3 = new Student(theApplicant.getName(), theApplicant.getAge(), theApplicant.getGender(),
+        Student student = new Student(theApplicant.getName(), theApplicant.getAge(), theApplicant.getGender(),
                 theApplicant.getPhone(), theApplicant.getEmail(), 100000, 0, 0, "Class1", 4);
-        theStudent.add(student3);
-        return "Admission Successful. " + student3.getName() + " has been admitted to " + student3.getClassAssigned();
+        theStudent.add(student);
+        return "Admission Successful. " + student.getName() + " has been admitted to " + student.getClassAssigned();
     }
 }

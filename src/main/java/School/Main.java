@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 //      Principal principal = new Principal("Prince", 40, "male", "070-000-4110", "test@example.com", 50.9);
 
-        Teacher teacher = new Teacher("Prince", 28, "male", "070-000-4010", "prince@example.com", 700000.00, "teacher", 1);
+        Teacher teacher = new Teacher("Prince", 28, "male", "070-000-4010", "prince@example.com", 700000.00, "teacher", 1, "class1");
         Principal principal = new Principal("Lekan", 26, "male", "080-220-4010", "lekan@example.com", 250000.00,
                 "principal", 2);
         NonAcademic nonAcademic = new NonAcademic("Jane", 34, "female", "090-110-4010", "jane@example.com", 100000.00,
@@ -43,7 +43,8 @@ public class Main {
 
         Classes classes = Classes.CLASS1;
         System.out.println(classes);
-        teacher.takeCourse();
+        teacher.viewCourses();
+        student1.viewCourses();
 
         System.out.println("Before expelling Mike: " + studentList.size());
         Principal.expelStudent(studentList, student1.getName());

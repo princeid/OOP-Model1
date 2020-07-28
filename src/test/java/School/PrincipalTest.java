@@ -1,14 +1,14 @@
 package School;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 class PrincipalTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void expelStudent() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void admitApplicant() {
     }
 }

@@ -1,30 +1,32 @@
 package School;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class StudentTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getTotalFees() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getFeesPaid() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getGradeScore() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getClassAssigned() {
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void getId() {
     }
 
-    @org.junit.jupiter.api.Test
-    void takeCourse() {
+    @Test
+    void viewCourses() {
     }
 }
