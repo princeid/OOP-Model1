@@ -6,7 +6,6 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-//      Principal principal = new Principal("Prince", 40, "male", "070-000-4110", "test@example.com", 50.9);
 
         Teacher teacher = new Teacher("Prince", 28, "male", "070-000-4010", "prince@example.com", 700000.00, "teacher", 1, "class1");
         Principal principal = new Principal("Lekan", 26, "male", "080-220-4010", "lekan@example.com", 250000.00,

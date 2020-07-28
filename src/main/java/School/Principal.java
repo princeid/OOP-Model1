@@ -9,12 +9,13 @@ public class Principal extends Staff {
         super(name, age, gender, phone, email, salary, jobTitle, id);
     }
 
-    public static void expelStudent(List<Student> theStudent, String studentName) {
+    public static int expelStudent(List<Student> theStudent, String studentName) {
         for (Student student : theStudent) {
             if (studentName.equals(student.getName())) {
                 theStudent.remove(student);
             }
         }
+        return theStudent.size();
     }
 
     public static String admitApplicant(List<Applicant> applicantList, Applicant theApplicant, List<Student> theStudent) {

@@ -9,6 +9,11 @@ class TeacherTest {
     private Teacher teacher2;
     private Teacher teacher3;
 
+
+    /**
+     *  Once a teacher is created, the courses and the class the teacher is to take can be viewed by calling the viewCourses method
+     *  on that particular teacher object.
+     */
     @Test
     void viewCourses() {
         teacher1 = new Teacher("Prince", 28, "male", "070-000-4010", "prince@example.com", 700000.00,

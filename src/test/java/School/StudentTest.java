@@ -12,7 +12,7 @@ class StudentTest {
     private Student prince;
 
     @BeforeEach
-    public void setup() {
+    void setup() {
         prince = new Student("Prince", 26,"male", "090-715-8888", "prince@example.com", 10000, 2500, 95, "class3",
                 3);
     }
@@ -42,6 +42,10 @@ class StudentTest {
         assertEquals(3, prince.getId());
     }
 
+    /**
+     *  Once a student is created, the courses and the class assigned to that student can be viewed by calling the viewCourses method on that
+     *  particular student object.
+     */
     @Test
     void viewCourses() {
         student1 = new Student("Mike", 24,"male", "090-711-0011", "mike@example.com", 100000, 0, 0, "class1",

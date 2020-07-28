@@ -7,6 +7,8 @@ public abstract class NonAcademic extends Staff {
         super(name, age, gender, phone, email, salary, jobTitle, id);
     }
 
-    // Duty method is to be implemented by the sub classes of the non-academic staffs, like cleaners, security, etc.
+    /*
+       Duty method is to be implemented by the sub classes of the non-academic staffs, like cleaners, security, etc.
+     */
     public abstract void duty();
 }
