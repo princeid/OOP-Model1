@@ -11,13 +11,10 @@ public class Main {
         Teacher teacher = new Teacher("Prince", 28, "male", "070-000-4010", "prince@example.com", 700000.00, "teacher", 1, "class1");
         Principal principal = new Principal("Lekan", 26, "male", "080-220-4010", "lekan@example.com", 250000.00,
                 "principal", 2);
-        NonAcademic nonAcademic = new NonAcademic("Jane", 34, "female", "090-110-4010", "jane@example.com", 100000.00,
-                "non academic staff", 3);
 
         List<Staff> staffList = new ArrayList<Staff>();
         staffList.add(teacher);
         staffList.add(principal);
-        staffList.add(nonAcademic);
 
         Applicant applicant1 = new Applicant("Gino", 21, "male", "011-777-0101", "gino@example.com");
         Applicant applicant2 = new Applicant("Lisa", 23, "female", "111-555-0101", "lisa@example.com");
