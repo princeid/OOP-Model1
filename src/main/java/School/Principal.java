@@ -22,12 +22,12 @@ public class Principal extends Staff {
         if (theApplicant.getAge() < 10) {
             return "Admission Denied. Minimum age requirement is 50";
         }
-        if (applicantList.size() > 50) {
+        if (applicantList.size() > 2) {
             return "Admission Denied. Class capacity is full";
         }
 
         Student student = new Student(theApplicant.getName(), theApplicant.getAge(), theApplicant.getGender(),
-                theApplicant.getPhone(), theApplicant.getEmail(), 100000, 0, 0, "Class1", 4);
+                theApplicant.getPhone(), theApplicant.getEmail(), 100000, 0, 0, "class1", 4);
         theStudent.add(student);
         return "Admission Successful. " + student.getName() + " has been admitted to " + student.getClassAssigned();
     }

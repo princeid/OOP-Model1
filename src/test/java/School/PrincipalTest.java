@@ -16,7 +16,13 @@ class PrincipalTest {
     private Student prince;
 
     private Principal principal;
+
+    private Applicant applicant1;
+    private Applicant applicant2;
+    private Applicant applicant3;
+
     List<Student> studentList;
+    List<Applicant> applicantList;
 
     @BeforeEach
     void setup() {
@@ -25,6 +31,9 @@ class PrincipalTest {
         studentList = new ArrayList<Student>();
     }
 
+    /**
+     *  Only the principal can expel a student from the school
+     */
     @Test
     void expelStudent() {
         student1 = new Student("Mike", 24,"male", "090-711-0011", "mike@example.com", 100000, 0, 0, "class1",
@@ -42,6 +51,35 @@ class PrincipalTest {
     }
 
     @Test
-    void admitApplicant() {
+    void admitApplicantBasedonAge() {
+        applicant1 = new Applicant("Gino", 8, "male", "011-777-0101", "gino@example.com");
+        applicant2 = new Applicant("Lisa", 23, "female", "111-555-0101", "lisa@example.com");
+        applicant3 = new Applicant("Jude", 21, "male", "211-707-3101", "jude@example.com");
+
+        applicantList = new ArrayList<Applicant>();
+
+        applicantList.add(applicant1);
+        applicantList.add(applicant2);
+
+        assertAll(
+                () -> assertEquals("Admission Denied. Minimum age requirement is 50", Principal.admitApplicant(applicantList, applicant1, studentList)),
+                () -> assertEquals("Admission Successful. Lisa has been admitted to class1",
+                        Principal.admitApplicant(applicantList, applicant2, studentList))
+        );
+    }
+
+    @Test
+    void admitApplicantTestForClassCapacity() {
+        applicant1 = new Applicant("Gino", 8, "male", "011-777-0101", "gino@example.com");
+        applicant2 = new Applicant("Lisa", 23, "female", "111-555-0101", "lisa@example.com");
+        applicant3 = new Applicant("Jude", 21, "male", "211-707-3101", "jude@example.com");
+
+        applicantList = new ArrayList<Applicant>();
+
+        applicantList.add(applicant1);
+        applicantList.add(applicant2);
+        applicantList.add(applicant3);
+
+        assertEquals("Admission Denied. Class capacity is full", Principal.admitApplicant(applicantList, applicant3, studentList));
     }
 }

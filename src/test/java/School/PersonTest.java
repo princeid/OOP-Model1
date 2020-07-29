@@ -1,46 +1,41 @@
 package School;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 class PersonTest {
 
-    @Test
-    void getName() {
+    Person person;
+
+    @BeforeEach
+    void setup() {
+        person = new Person("Prince", 28, "male", "070-000-4010", "prince@example.com");
     }
 
     @Test
-    void setName() {
+    void getName() {
+        assertEquals("Prince", person.getName());
     }
 
     @Test
     void getAge() {
+        assertEquals(28, person.getAge());
     }
 
-    @Test
-    void setAge() {
-    }
 
     @Test
     void getGender() {
-    }
-
-    @Test
-    void setGender() {
+        assertEquals("male", person.getGender());
     }
 
     @Test
     void getPhone() {
-    }
-
-    @Test
-    void setPhone() {
+        assertEquals("070-000-4010", person.getPhone());
     }
 
     @Test
     void getEmail() {
-    }
-
-    @Test
-    void setEmail() {
+        assertEquals("prince@example.com", person.getEmail());
     }
 }
