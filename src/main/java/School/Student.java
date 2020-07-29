@@ -7,9 +7,8 @@ public class Student extends Person implements Course {
     private String classAssigned;
     private int id;
 
-    public Student(String name, int age, String gender, String phone, String email, int totalFees,
-                   int feesPaid,
-                   int gradeScore, String classAssigned, int id) {
+    public Student(String name, int age, String gender, String phone, String email, int totalFees, int feesPaid, int gradeScore, String classAssigned,
+                   int id) {
         super(name, age, gender, phone, email);
         this.totalFees = totalFees;
         this.feesPaid = feesPaid;
@@ -57,6 +56,28 @@ public class Student extends Person implements Course {
             String classes = level.getClasses();
             System.out.println(getName() + ", here's a list of your Class3 courses for the term: " + classes);
             return getName() + ", here's a list of your Class3 courses for the term: " + classes;
+        }
+        return "Invalid";
+    }
+
+    public String attendClass() {
+        if (classAssigned.equals("class1")) {
+            Classes level = Classes.CLASS1;
+            String classes = level.getClasses();
+            System.out.println("I am attending a class now");
+            return "I am attending a class now";
+        }
+        if (classAssigned.equals("class2")) {
+            Classes level = Classes.CLASS2;
+            String classes = level.getClasses();
+            System.out.println("I am attending a class now");
+            return "I am attending a class now";
+        }
+        if (classAssigned.equals("class3")) {
+            Classes level = Classes.CLASS3;
+            String classes = level.getClasses();
+            System.out.println("I am attending a class now");
+            return "I am attending a class now";
         }
         return "Invalid";
     }

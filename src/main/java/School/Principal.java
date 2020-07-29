@@ -31,4 +31,5 @@ public class Principal extends Staff {
         theStudent.add(student);
         return "Admission Successful. " + student.getName() + " has been admitted to " + student.getClassAssigned();
     }
+
 }

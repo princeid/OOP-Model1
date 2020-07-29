@@ -9,7 +9,6 @@ class TeacherTest {
     private Teacher teacher2;
     private Teacher teacher3;
 
-
     /**
      *  Once a teacher is created, the courses and the class the teacher is to take can be viewed by calling the viewCourses method
      *  on that particular teacher object.
@@ -31,5 +30,18 @@ class TeacherTest {
                 () -> assertEquals("Dickson, you're taking Class2 on: Literature, Economics, Government, Agric", result2),
                 () -> assertEquals("Jane, you're taking Class3 on: Music, History, Food & Nutrition, Banking & Finance", result3)
         );
+    }
+
+    /**
+     * The teacher Class implements the attend method in the Course Interface
+     */
+    @Test
+    void attendClass() {
+        teacher1 = new Teacher("Prince", 28, "male", "070-000-4010", "prince@example.com", 700000.00,
+                "teacher", 1, "class1");
+
+        String teacher1IsTeachingClass = teacher1.attendClass();
+
+        assertEquals("I am teaching a class now", teacher1IsTeachingClass);
     }
 }

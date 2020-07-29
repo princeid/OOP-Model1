@@ -10,7 +10,9 @@ public class Teacher extends Staff implements Course {
         this.classAssigned = classAssigned;
     }
 
-    // The teacher is Implementing the Course Interface
+    /*
+     The teacher is Implementing the Course Interface
+     */
     public String viewCourses() {
         if (classAssigned.equals("class1")) {
             Classes level = Classes.CLASS1;
@@ -29,6 +31,28 @@ public class Teacher extends Staff implements Course {
             String classes = level.getClasses();
             System.out.println( getName() + ", you're taking Class3 on: " + classes);
             return getName() + ", you're taking Class3 on: " + classes;
+        }
+        return "Invalid";
+    }
+
+    public String attendClass() {
+        if (classAssigned.equals("class1")) {
+            Classes level = Classes.CLASS1;
+            String classes = level.getClasses();
+            System.out.println("I am teaching a class now");
+            return "I am teaching a class now";
+        }
+        if (classAssigned.equals("class2")) {
+            Classes level = Classes.CLASS2;
+            String classes = level.getClasses();
+            System.out.println("I am teaching a class now");
+            return "I am teaching a class now";
+        }
+        if (classAssigned.equals("class3")) {
+            Classes level = Classes.CLASS3;
+            String classes = level.getClasses();
+            System.out.println("I am teaching a class now");
+            return "I am teaching a class now";
         }
         return "Invalid";
     }

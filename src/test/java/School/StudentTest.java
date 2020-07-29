@@ -52,12 +52,27 @@ class StudentTest {
                 1);
         student2 = new Student("James", 27,"male", "555-711-0011", "james@example.com", 100000, 0, 0, "class2", 2);
 
-        String result1 = student1.viewCourses();
-        String result2 = student2.viewCourses();
+        String student1Courses = student1.viewCourses();
+        String student2Courses = student2.viewCourses();
 
         assertAll(
-                () -> assertEquals("Mike, here's a list of your Class1 courses for the term: Maths, English, Chemistry, Physics", result1),
-                () -> assertEquals("James, here's a list of your Class2 courses for the term: Literature, Economics, Government, Agric", result2)
+                () -> assertEquals("Mike, here's a list of your Class1 courses for the term: Maths, English, Chemistry, Physics", student1Courses),
+                () -> assertEquals("James, here's a list of your Class2 courses for the term: Literature, Economics, Government, Agric",
+                        student2Courses)
         );
+    }
+
+    /**
+     * The student Class implements the attend method in the Course Interface
+     */
+    @Test
+    void attendClass() {
+        student1 = new Student("Mike", 24,"male", "090-711-0011", "mike@example.com", 100000, 0, 0, "class1",
+                1);
+
+        String student1IsHavingClass = student1.attendClass();
+
+        assertEquals("I am attending a class now", student1IsHavingClass);
+
     }
 }
