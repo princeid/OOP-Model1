@@ -37,7 +37,9 @@ public class Student extends Person implements Course {
         return id;
     }
 
-    // The student is Implementing the Course Interface
+    /**
+     * The student is Implementing the Course Interface by viewing the list of courses he/she is to attend
+     */
     public String viewCourses() {
         if (classAssigned.equals("class1")) {
             Classes level = Classes.CLASS1;
@@ -60,6 +62,9 @@ public class Student extends Person implements Course {
         return "Invalid";
     }
 
+    /**
+     *  The student is Implementing the Course Interface by viewing the list of courses he/she is to attend
+     */
     public String attendClass() {
         if (classAssigned.equals("class1")) {
             Classes level = Classes.CLASS1;

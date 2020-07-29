@@ -10,8 +10,8 @@ public class Teacher extends Staff implements Course {
         this.classAssigned = classAssigned;
     }
 
-    /*
-     The teacher is Implementing the Course Interface
+    /**
+     * The teacher is Implementing the Course Interface by viewing the courses she teaches
      */
     public String viewCourses() {
         if (classAssigned.equals("class1")) {
@@ -35,6 +35,9 @@ public class Teacher extends Staff implements Course {
         return "Invalid";
     }
 
+    /**
+     * The teacher is Implementing the Course Interface by teaching a class
+     */
     public String attendClass() {
         if (classAssigned.equals("class1")) {
             Classes level = Classes.CLASS1;

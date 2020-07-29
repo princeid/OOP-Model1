@@ -1,5 +1,8 @@
 package School;
 
+/**
+ * Assigning a list of courses for each class
+ */
 public enum Classes {
     CLASS1("Maths, English, Chemistry, Physics"),
     CLASS2("Literature, Economics, Government, Agric"),

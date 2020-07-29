@@ -62,7 +62,8 @@ class PrincipalTest {
         applicantList.add(applicant2);
 
         assertAll(
-                () -> assertEquals("Admission Denied. Minimum age requirement is 50", Principal.admitApplicant(applicantList, applicant1, studentList)),
+                () -> assertEquals("Admission Denied. Minimum age requirement is 10", Principal.admitApplicant(applicantList, applicant1,
+                        studentList)),
                 () -> assertEquals("Admission Successful. Lisa has been admitted to class1",
                         Principal.admitApplicant(applicantList, applicant2, studentList))
         );
